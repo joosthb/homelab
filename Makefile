@@ -2,7 +2,8 @@
 .PHONY: *
 .EXPORT_ALL_VARIABLES:
 
-KUBECONFIG = $(shell pwd)/metal/kubeconfig.yaml
+# KUBECONFIG = $(shell pwd)/metal/kubeconfig.yaml
+KUBECONFIG = /etc/rancher/k3s/k3s.yaml
 KUBE_CONFIG_PATH = $(KUBECONFIG)
 
 default: metal bootstrap external wait post-install
