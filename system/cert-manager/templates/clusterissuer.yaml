@@ -16,5 +16,8 @@ spec:
     email: letsencrypt@hendricksen.net
     solvers:
       - http01:
-          ingress:
-            # class: traefik-cert-manager
+          gatewayHTTPRoute:
+            parentRefs:
+              - name: traefik
+                namespace: traefik
+                kind: Gateway
