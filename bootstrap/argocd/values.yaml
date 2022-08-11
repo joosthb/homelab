@@ -20,7 +20,7 @@ argo-cd:
     ingress:
       enabled: true
       annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        # traefik.ingress.kubernetes.io/router.entrypoints: websecure
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/appName: ArgoCD
         hajimari.io/icon: robot
