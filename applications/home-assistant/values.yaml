@@ -1,0 +1,19 @@
+paperless:
+  ingress:
+    main:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        # hajimari.io/appName: Paperless
+        # hajimari.io/icon: file-document
+      hosts:
+        - host: &host hass.home.hendricksen.net
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - secretName: home-assistant-tls-certificate
+          hosts:
+            - *host
+  postgresql:
+    enabled: true
