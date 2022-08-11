@@ -17,5 +17,4 @@ spec:
     solvers:
       - http01:
           ingress:
-            enabled: true
             # class: traefik-cert-manager
