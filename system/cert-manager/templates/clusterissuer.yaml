@@ -4,16 +4,12 @@ metadata:
   name: letsencrypt-prod
 spec:
   acme:
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    # server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: letsencrypt@hendricksen.net
     privateKeySecretRef:
       name: letsencrypt-prod
-    # solvers:
-    # - dns01:
-    #     cloudflare:
-    #       apiTokenSecretRef:
-    #         name: cloudflare-api-token
-    #         key: api-token
-    email: letsencrypt@hendricksen.net
+    
     solvers:
       - http01:
           ingress:
