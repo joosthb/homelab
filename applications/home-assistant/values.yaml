@@ -1,4 +1,4 @@
-paperless:
+home-assistant:
   ingress:
     main:
       enabled: true
