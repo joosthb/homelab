@@ -4,7 +4,7 @@ metadata:
   name: letsencrypt-prod
 spec:
   acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: letsencrypt-prod
     # solvers:
@@ -16,8 +16,4 @@ spec:
     email: letsencrypt@hendricksen.net
     solvers:
       - http01:
-          gatewayHTTPRoute:
-            parentRefs:
-              - name: traefik
-                namespace: traefik
-                kind: Gateway
+          ingress:
