@@ -13,3 +13,11 @@ spec:
     #       apiTokenSecretRef:
     #         name: cloudflare-api-token
     #         key: api-token
+    email: letsencrypt@hendricksen.net
+    solvers:
+      - http01:
+          gatewayHTTPRoute:
+            parentRefs:
+              - name: traefik
+                namespace: traefik
+                kind: Gateway

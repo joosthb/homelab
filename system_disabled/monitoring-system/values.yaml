@@ -3,13 +3,13 @@ kube-prometheus-stack:
     adminPassword: null
     ingress:
       enabled: true
-      ingressClassName: nginx
+      # ingressClassName: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
         hajimari.io/appName: Grafana
         hajimari.io/icon: chart-bar
       hosts:
-        - &host grafana.khuedoan.com
+        - &host grafana.home.hendricksen.net
       tls:
         - secretName: grafana-general-tls
           hosts:
