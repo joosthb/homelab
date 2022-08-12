@@ -12,8 +12,7 @@ home-assistant:
             - path: /
               pathType: Prefix
       tls:
-        - secretName: home-assistant-tls-certificate
-          hosts:
+        - hosts:
             - *host
   postgresql:
     enabled: true
